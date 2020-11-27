@@ -6,6 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "JetBrains Mono NL:pixelsize=14:antialias=true:autohint=true";
+static char *font2[] = { "fontawesome:pixelsize=11:antialias=true:autohint=true", };
+
 static int borderpx = 2;
 
 /*
