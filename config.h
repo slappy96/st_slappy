@@ -112,6 +112,7 @@ float alpha = 0.9;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
+
 "#585858",
 "#5f0000",
 "#d9d9d9",
@@ -130,10 +131,10 @@ static const char *colorname[] = {
 "#797979",
 [255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
+/* more colors can be added after 255 to use with DefaultXX */
 	       "#aaaaaa",
 	       "#000000",
-	       "black",
+	       "#000D2C",
 };
 
 
@@ -149,9 +150,10 @@ static unsigned int defaultrcs = 256;
 /* Colors used for selection */
 unsigned int selectionbg = 257;
 unsigned int selectionfg = 7;
-/* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
+
+  /* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
 /* Else if 1 keep original foreground-color of each cell => more colors :) */
-static int ignoreselfg = 1;
+static int ignoreselfg = 0;
 
 /*
  * Default shape of cursor
