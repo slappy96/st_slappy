@@ -17,6 +17,7 @@ st-selectionbg-alpha-0.8.2.diff
 st-selectioncolors-0.8.4.diff
 st-vertcenter-20180320-6ac8c8a.diff
 st-xresources-20200604-9ba7ecf.diff
+st-invert-0.8.4.diff
 =======================================================
 Other additions direct in config.h:
 

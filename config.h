@@ -134,7 +134,7 @@ static const char *colorname[] = {
 /* more colors can be added after 255 to use with DefaultXX */
 "#aaaaaa",
 "#000000",
-"#000D2C",
+"#e2d3ba",
 };
 
 
@@ -143,17 +143,9 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 7;
-unsigned int defaultbg = 257;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 256;
-
-/* Colors used for selection */
-unsigned int selectionbg = 257;
-unsigned int selectionfg = 7;
-
-  /* If 0 use selectionfg as foreground in order to have a uniform foreground-color */
-/* Else if 1 keep original foreground-color of each cell => more colors :) */
-static int ignoreselfg = 0;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
@@ -256,8 +248,10 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	/*{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },*/
+	{ TERMMOD,              XK_J,           zoom,           {.f =  -1} },
+	{ TERMMOD,              XK_K,           zoom,           {.f =  +1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_c,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_v,           clippaste,      {.i =  0} },
@@ -271,6 +265,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
 	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
 	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+	{ TERMMOD,               XK_X,           invert,        { } },
+
 };
 
 /*
