@@ -21,11 +21,10 @@ st-invert-0.8.4.diff
 =======================================================
 Other additions direct in config.h:
 
-colorscheme -- solarized (also reads xresources)
-font -- JetBrains Mono NL size 14
-font2 -- fontawesome (icons) size 11
-alt j/k -- keybind for terminal scroll dn/up
-
+       font -- JetBrains Mono size 14
+      font2 -- fontawesome (icons) size 11
+    alt j/k -- keybind for terminal scroll dn/up
+colorscheme -- reads Xresources
 ======================================================
 INSTALL
 1. clone - git clone https://github.com/slappy96/st_slappy.git
